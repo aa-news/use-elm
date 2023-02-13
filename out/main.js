@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from 'react';
 const kCommand = Symbol('kCommand');
-export function useElm(initialState, update, execute, subscribe) {
+export default function useElm(initialState, update, execute, subscribe) {
     const [internal, message] = useReducer((model, message) => {
         return toInternal(update(model, message));
     }, toInternal(initialState));

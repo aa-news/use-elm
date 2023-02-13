@@ -4,7 +4,7 @@ export type BaseCommand = { type: string };
 
 const kCommand = Symbol('kCommand');
 
-export function useElm<
+export default function useElm<
     Model, 
     Message,
     Command extends BaseCommand

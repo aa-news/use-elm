@@ -1,11 +1,11 @@
 {
 	"name": "@aa-news/use-elm",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"private": true,
 	"repository": "https://github.com/aa-news/use-elm.git",
 
 	"main": "./out/main.js",
-	"types": "./out/index.d.ts",
+	"types": "./out/main.d.ts",
 
 	"devDependencies": {
 		"@types/react": "^18.0.28",
