@@ -1,11 +1,5 @@
 import React from 'react';
-export interface Cmd<M> {
-    cmdName: string;
-    execute(sendMessage: (m: M) => void): void;
-}
-export declare const cmdNone: Cmd<any>;
-export interface Sub<M> {
-    subName: string;
-    setup(sendMessage: (m: M) => void): () => void;
-}
-export default function useElm<Model, Message>(initialPair: [Model, Cmd<Message>], update: (model: Model, message: Message) => [Model, Cmd<Message>], subscriptions: Sub<Message>[], enableLogging?: boolean): [Model, React.Dispatch<Message>];
+export type BaseCommand = {
+    type: string;
+};
+export default function useElm<Model, Message, Command extends BaseCommand>(initialState: [Model, Command], update: (model: Model, message: Message) => [Model, Command], execute: (command: Command, message: (m: Message) => void) => void, subscribe?: (message: (m: Message) => void) => () => void): [Model, React.Dispatch<Message>];
