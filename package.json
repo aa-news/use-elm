@@ -5,6 +5,14 @@
 	"main": "./out/main.js",
 	"types": "./out/main.d.ts",
 
+	"files": [
+		"./out"
+	],
+
+	"scripts": {
+		"publish": "pnpm publish --access=public"
+	},
+
 	"devDependencies": {
 		"@types/react": "^18.0.28",
 		"react": "^18.2.0"
