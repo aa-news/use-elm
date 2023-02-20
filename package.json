@@ -1,8 +1,6 @@
 {
-	"name": "@aa-news/use-elm",
+	"name": "@azerum/use-elm",
 	"version": "2.0.0",
-	"private": true,
-	"repository": "https://github.com/aa-news/use-elm.git",
 
 	"main": "./out/main.js",
 	"types": "./out/main.d.ts",
